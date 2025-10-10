@@ -1,14 +1,12 @@
 import {
-  definePermissions,
-  Schema as ZeroSchema,
-  createBuilder,
-} from '@rocicorp/zero';
-import {schema as genSchema} from './schema.gen';
+	createBuilder,
+	definePermissions,
+	type Schema as ZeroSchema,
+} from "@rocicorp/zero";
+import { schema as genSchema } from "./schema.gen";
 
 export const schema = {
-  ...genSchema,
-  enableLegacyMutators: false,
-  enableLegacyQueries: false,
+	...genSchema,
 } as const satisfies ZeroSchema;
 
 export const builder = createBuilder(schema);
