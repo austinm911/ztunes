@@ -1,0 +1,16 @@
+{
+	"name": "@ztunes/env",
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"main": "src/index.ts",
+	"scripts": {
+		"typecheck": "tsc -b"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@ztunes/tsconfig": "workspace:*",
+		"typescript": "catalog:"
+	}
+}

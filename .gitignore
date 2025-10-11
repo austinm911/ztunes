@@ -7,3 +7,13 @@ node_modules
 .vercel
 .nitro
 .output
+.turbo
+dist
+
+# Old directories (to be removed after migration)
+/app
+/auth
+/db
+/shared
+/zero
+/scripts

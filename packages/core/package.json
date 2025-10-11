@@ -1,0 +1,46 @@
+{
+	"name": "@ztunes/core",
+	"type": "module",
+	"exports": {
+		"./auth": "./src/auth/index.ts",
+		"./auth/*": "./src/auth/*.ts",
+		"./db": "./src/db/index.ts",
+		"./db/*": "./src/db/*.ts",
+		"./shared/*": "./src/shared/*.ts",
+		"./zero": "./src/zero/index.ts",
+		"./zero/*": "./src/zero/*.ts"
+	},
+	"main": "src/index.ts",
+	"scripts": {
+		"typecheck": "tsc -b",
+		"db:generate": "bun --env-file=../../.env -- drizzle-kit generate",
+		"db:migrate": "bun --env-file=../../.env -- drizzle-kit migrate",
+		"db:push": "bun --env-file=../../.env -- drizzle-kit push",
+		"dev:db": "bun --env-file=../../.env -- ../../scripts/dev-db.ts",
+		"db:seed": "bun --env-file=../../.env -- tsx src/db/seed.ts",
+		"dev:clean": "bun --env-file=../../.env -- ../../scripts/clean.ts",
+		"seed": "bun --env-file=../../.env -- ../../scripts/seed.ts",
+		"zero:generate": "drizzle-zero generate -c ./src/zero/config.ts -format -o ./src/zero/schema.gen.ts",
+		"dev:zero": "bun --env-file=../../.env -- zero-cache-dev -p src/zero/permissions.ts"
+	},
+	"dependencies": {
+		"@ztunes/env": "workspace:*",
+		"@rocicorp/zero": "catalog:",
+		"better-auth": "catalog:",
+		"cookie": "catalog:",
+		"drizzle-orm": "catalog:backend",
+		"jose": "catalog:",
+		"pg": "catalog:backend",
+		"zod": "catalog:",
+		"dotenv": "catalog:utilities",
+		"dotenv-expand": "catalog:utilities"
+	},
+	"devDependencies": {
+		"@ztunes/tsconfig": "workspace:*",
+		"@types/pg": "catalog:types",
+		"drizzle-kit": "catalog:backend",
+		"drizzle-zero": "catalog:backend",
+		"tsx": "catalog:utilities",
+		"typescript": "catalog:"
+	}
+}

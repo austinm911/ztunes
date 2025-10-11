@@ -1,0 +1,42 @@
+{
+	"name": "@ztunes/web",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite dev",
+		"dev:ui": "bun --env-file=../../.env -- vite dev",
+		"typecheck": "tsc -b"
+	},
+	"dependencies": {
+		"@ztunes/core": "workspace:*",
+		"@ztunes/env": "workspace:*",
+		"@rocicorp/zero": "catalog:",
+		"@tanstack/react-router": "catalog:frontend",
+		"@tanstack/react-start": "catalog:frontend",
+		"@tanstack/react-virtual": "catalog:frontend",
+		"better-auth": "catalog:",
+		"js-cookie": "catalog:utilities",
+		"react": "catalog:frontend",
+		"react-dom": "catalog:frontend",
+		"react-cookie": "catalog:frontend",
+		"use-debounce": "catalog:utilities",
+		"jose": "catalog:",
+		"nanoid": "catalog:utilities",
+		"postgres": "catalog:backend",
+		"vite": "catalog:frontend",
+		"vite-tsconfig-paths": "catalog:frontend",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@ztunes/tsconfig": "workspace:*",
+		"@types/react": "catalog:types",
+		"@types/react-dom": "catalog:types",
+		"@vitejs/plugin-react": "catalog:frontend",
+		"tsx": "catalog:utilities",
+		"typescript": "catalog:",
+		"concurrently": "catalog:utilities",
+		"chokidar-cli": "catalog:utilities",
+		"wait-on": "catalog:utilities"
+	}
+}

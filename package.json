@@ -1,58 +1,84 @@
 {
 	"name": "ztunes",
 	"version": "1.0.0",
-	"main": "index.js",
+	"private": true,
 	"type": "module",
-	"scripts": {
-		"dev": "tsx scripts/dev.ts",
-		"dev:db": "tsx scripts/dev-db.ts",
-		"dev:zero": "npx zero-cache-dev",
-		"db:push": "drizzle-kit push",
-		"db:generate": "drizzle-kit generate",
-		"db:migrate": "drizzle-kit migrate",
-		"dev:ui": "tsx scripts/dev-ui.ts",
-		"dev:clean": "tsx scripts/clean.ts",
-		"seed": "tsx scripts/seed.ts",
-		"generate-zero-schema": "drizzle-zero generate -c ./zero/config.ts -format -o zero/schema.gen.ts",
-		"build": "vite build"
-	},
-	"trustedDependencies": [
-		"@rocicorp/zero-sqlite3"
+	"workspaces": [
+		"apps/*",
+		"packages/*"
 	],
+	"scripts": {
+		"build": "turbo run build",
+		"clean": "turbo clean && rm -rf node_modules .turbo dist bun.lock",
+		"db:generate": "turbo run db:generate",
+		"db:migrate": "turbo run db:migrate",
+		"db:push": "turbo run db:push",
+		"db:seed": "turbo run db:seed",
+		"dev:clean": "turbo run dev:clean",
+		"dev:db": "turbo run dev:db",
+		"dev:ui": "turbo run dev:ui",
+		"dev:zero": "turbo run dev:zero",
+		"typecheck": "turbo run typecheck",
+		"zero:generate": "turbo run zero:generate"
+	},
 	"dependencies": {
+		"drizzle-orm": "catalog:backend"
+	},
+	"devDependencies": {
+		"prettier": "^3.6.2",
+		"turbo": "^2.5.6",
+		"typescript": "catalog:"
+	},
+	"packageManager": "bun@1.3.0",
+	"catalog": {
 		"@rocicorp/zero": "0.24.2025100900",
-		"@tanstack/react-router": "^1.132.47",
-		"@tanstack/react-start": "^1.132.52",
-		"@tanstack/react-virtual": "^3.13.12",
+		"drizzle-orm": "^0.44.6",
 		"better-auth": "^1.3.27",
 		"cookie": "^1.0.2",
 		"dotenv": "^17.2.3",
-		"dotenv-expand": "^12.0.3",
-		"drizzle-orm": "^0.44.6",
 		"jose": "^6.1.0",
-		"js-cookie": "^3.0.5",
-		"nanoid": "^5.1.6",
 		"pg": "^8.16.3",
-		"react": "^19.2.0",
-		"react-cookie": "^8.0.1",
-		"react-dom": "^19.2.0",
-		"use-debounce": "^10.0.6",
-		"vite": "^7.1.9",
-		"zod": "^4.1.12"
+		"zod": "^4.1.12",
+		"typescript": "^5.9.3"
 	},
-	"devDependencies": {
-		"@types/pg": "^8.15.5",
-		"@types/react": "^19.2.2",
-		"@types/react-dom": "^19.2.1",
-		"@vitejs/plugin-react": "^5.0.4",
-		"chokidar-cli": "^3.0.0",
-		"concurrently": "^9.2.1",
-		"drizzle-kit": "^0.31.5",
-		"drizzle-zero": "0.14.3",
-		"prettier": "^3.6.2",
-		"tsx": "^4.20.6",
-		"typescript": "^5.9.3",
-		"vite-tsconfig-paths": "^5.1.4",
-		"wait-on": "^9.0.1"
-	}
+	"catalogs": {
+		"frontend": {
+			"vite": "^7.1.9",
+			"@tanstack/react-router": "^1.132.47",
+			"@tanstack/react-start": "^1.132.52",
+			"@tanstack/react-virtual": "^3.13.12",
+			"@vitejs/plugin-react": "^5.0.4",
+			"react": "^19.2.0",
+			"react-dom": "^19.2.0",
+			"react-cookie": "^8.0.1",
+			"vite-tsconfig-paths": "^5.1.4"
+		},
+		"backend": {
+			"drizzle-orm": "^0.44.6",
+			"drizzle-kit": "^0.31.5",
+			"postgres": "^3.4.7",
+			"drizzle-zero": "0.14.3",
+			"pg": "^8.16.3"
+		},
+		"types": {
+			"@types/react": "^19.2.2",
+			"@types/react-dom": "^19.2.1",
+			"@types/pg": "^8.15.5",
+			"@types/node": "^20.0.0"
+		},
+		"utilities": {
+			"dotenv": "^17.2.3",
+			"dotenv-expand": "^12.0.3",
+			"tsx": "^4.20.6",
+			"concurrently": "^9.2.1",
+			"chokidar-cli": "^3.0.0",
+			"wait-on": "^9.0.1",
+			"nanoid": "^5.1.6",
+			"js-cookie": "^3.0.5",
+			"use-debounce": "^10.0.6"
+		}
+	},
+	"trustedDependencies": [
+		"@rocicorp/zero-sqlite3"
+	]
 }
