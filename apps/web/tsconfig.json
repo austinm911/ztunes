@@ -2,7 +2,21 @@
 	"extends": "@ztunes/tsconfig/base.json",
 	"compilerOptions": {
 		"outDir": "dist",
-		"rootDir": "."
+		"rootDir": ".",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"src/*"
+			],
+			"@/alchemy": [
+				"alchemy.run.ts"
+			]
+		}
 	},
-	"include": ["src", "scripts", "env.d.ts", "vite.config.ts"]
+	"include": [
+		"src",
+		"scripts",
+		"env.d.ts",
+		"vite.config.ts"
+	]
 }

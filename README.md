@@ -1,3 +1,13 @@
+# Reproduction for `Error: Cannot find module 'cloudflare:workers'`
+
+```bash
+Error: Cannot find module 'cloudflare:workers' imported from '/
+Users/am/Coding/git/ztunes/apps/web/src/routes/api/zero/mutate.
+ts'
+```
+
+Notice the console logs in `apps/web/src/routes/api/zero/mutate.ts` don't throw before the error occurs.
+
 # ztunes
 
 A sync-based ecommerce app with 88k artists and 200k albums from the 1990's.
@@ -10,7 +20,7 @@ Built with:
 - [Better Auth](https://www.better-auth.com/)
 - [Fly.io](https://fly.io/)
 
-Live demo: https://ztunes.rocicorp.dev
+Live demo: <https://ztunes.rocicorp.dev>
 
 # Features
 
@@ -110,7 +120,7 @@ Additionally:
 - All mutations are instantaneous by default
 - Realtime collaboration for free
 
-See https://zero.rocicorp.dev/docs/reading-data#ttls for more information on ttls.
+See <https://zero.rocicorp.dev/docs/reading-data#ttls> for more information on ttls.
 
 ## Search Preloading
 

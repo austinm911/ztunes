@@ -17,8 +17,8 @@
     "compatibility": "node",
     "noBundle": true,
     "bindings": {
-      "DATABASE_URL": {
-        "@secret": "31Cqdb3QLA0K0+edk3eE5/O1GTGUDlS4RtDs35wCxODY4Tk76rdJ0Zvdfcnk91+nLd2UQ2dkow0SrXCrAONI9duMH63jumBM9YagUb2iMZF5AKptlzu9kActEfs="
+      "PG_URL": {
+        "@secret": "23spY5VtMtzwWou3aVyIxC/aZIh73DzQ3cErR5JzP1TGX4J8t3mIGarPFjkEyrm8wkRp5pxiJjHY4mxZW510xwy8FqHc3lC8mUaE9/1KRtQYUfj6M+nBb9CcYTs="
       },
       "VITE_SERVER_URL": "http://localhost:4848"
     },
@@ -43,7 +43,7 @@
     "id": "website",
     "format": "esm",
     "createdAt": 1760254720120,
-    "updatedAt": 1760254762996,
+    "updatedAt": 1760255297006,
     "url": "http://localhost:3001/",
     "routes": [],
     "domains": []
@@ -53,8 +53,8 @@
     "compatibility": "node",
     "noBundle": true,
     "bindings": {
-      "DATABASE_URL": {
-        "@secret": "FNlBxKfHeliSGZk8Pz/p4rpYSHgu6xq7XnzokYKYrwxcNwNxkIdgZNuo0Id1X4oc5wj8EtoP1m0fOjlqRgFzY5DCTQLh3b4EpYtoJmbQMFYiCOVb7AwlIVLCcqQ="
+      "PG_URL": {
+        "@secret": "ImrXu5PjsW/qlVx7mBGuDlcJZG3xuMjtfRGydlfrkW/aff1mY+RIcDL+AaWkxP31dXQTFmFf5a4zHnsNsN8vjjUP9S0R+9yKicrIjiWShjlRP0YViMwIkugF/qA="
       },
       "VITE_SERVER_URL": "http://localhost:4848"
     },

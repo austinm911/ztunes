@@ -12,10 +12,14 @@ import { createMutators } from "@ztunes/core/zero/mutators";
 import { schema } from "@ztunes/core/zero/schema";
 import * as jose from "jose";
 import postgres from "postgres";
+import type { frontend } from "../../../../alchemy.run";
 
-const _env = cloudflareEnv;
+// Need to use env vars process through alchemy.run. Not sure why there's a type error  here.
+const env = cloudflareEnv as frontend.Env;
+// This doesn't log  when `Error: Cannot find module 'cloudflare:workers' ` throws
+console.log("🚀 ~ env:", env);
 
-const pgURL = must(process.env.PG_URL, "PG_URL is required");
+const pgURL = must(env.PG_URL, "PG_URL is required");
 
 const processor = new PushProcessor(
 	new ZQLDatabase(new PostgresJSConnection(postgres(pgURL)), schema),

@@ -8,7 +8,7 @@ Estimated release dates:
 
 Port 3000 is in use, trying another one...
 
-  [32m[1mVITE[22m v7.1.9[39m  [2mready in [0m[1m1086[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v7.1.9[39m  [2mready in [0m[1m1157[22m[2m[0m ms[22m
 
   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3001[22m/[39m
 [2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
@@ -84,3 +84,7 @@ Error: Cannot find module 'cloudflare:workers' imported from '/Users/am/Coding/g
   body: [90mundefined[39m,
   unhandled: [33mtrue[39m
 }
+[2m12:46:10 AM[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mpage reload [39m[2msrc/routes/api/zero/mutate.ts[22m
+[vite] program reload
+[2m12:48:10 AM[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mpage reload [39m[2msrc/routes/api/zero/mutate.ts[22m
+[2m12:49:11 AM[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mpage reload [39m[2msrc/routes/api/zero/mutate.ts[22m
