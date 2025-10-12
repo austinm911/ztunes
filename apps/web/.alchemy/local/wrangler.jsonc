@@ -1,0 +1,20 @@
+{
+  "name": "web-website-am",
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_date": "2025-10-11",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_compat_populate_process_env"
+  ],
+  "assets": {
+    "directory": "../../dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "none",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": false
+  },
+  "vars": {
+    "DATABASE_URL": "postgres://postgres:password@localhost:5432/postgres",
+    "VITE_SERVER_URL": "http://localhost:4848"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "website",
+  "fqn": "web/am/website",
+  "seq": 0,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "website",
+    "Symbol(alchemy::ResourceFQN)": "web/am/website",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "entrypoint": "dist/server/index.js",
+    "compatibility": "node",
+    "noBundle": true,
+    "bindings": {
+      "DATABASE_URL": {
+        "@secret": "31Cqdb3QLA0K0+edk3eE5/O1GTGUDlS4RtDs35wCxODY4Tk76rdJ0Zvdfcnk91+nLd2UQ2dkow0SrXCrAONI9duMH63jumBM9YagUb2iMZF5AKptlzu9kActEfs="
+      },
+      "VITE_SERVER_URL": "http://localhost:4848"
+    },
+    "wrangler": {},
+    "name": "web-website-am",
+    "cwd": "",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "compatibilityDate": "2025-10-11",
+    "assets": {
+      "html_handling": "auto-trailing-slash",
+      "not_found_handling": "none",
+      "run_worker_first": false,
+      "directory": "dist/client"
+    },
+    "dev": {
+      "hasRemote": false
+    },
+    "type": "service",
+    "id": "website",
+    "format": "esm",
+    "createdAt": 1760254720120,
+    "updatedAt": 1760254762996,
+    "url": "http://localhost:3001/",
+    "routes": [],
+    "domains": []
+  },
+  "props": {
+    "entrypoint": "dist/server/index.js",
+    "compatibility": "node",
+    "noBundle": true,
+    "bindings": {
+      "DATABASE_URL": {
+        "@secret": "FNlBxKfHeliSGZk8Pz/p4rpYSHgu6xq7XnzokYKYrwxcNwNxkIdgZNuo0Id1X4oc5wj8EtoP1m0fOjlqRgFzY5DCTQLh3b4EpYtoJmbQMFYiCOVb7AwlIVLCcqQ="
+      },
+      "VITE_SERVER_URL": "http://localhost:4848"
+    },
+    "wrangler": {},
+    "name": "web-website-am",
+    "cwd": "",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "compatibilityDate": "2025-10-11",
+    "assets": {
+      "html_handling": "auto-trailing-slash",
+      "not_found_handling": "none",
+      "run_worker_first": false,
+      "directory": "dist/client"
+    },
+    "dev": {
+      "url": "http://localhost:3001/"
+    }
+  }
+}

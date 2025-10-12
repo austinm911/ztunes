@@ -1,3 +1,4 @@
+import { env as cloudflareEnv } from "cloudflare:workers";
 import {
 	PostgresJSConnection,
 	PushProcessor,
@@ -6,11 +7,13 @@ import {
 import { createFileRoute } from "@tanstack/react-router";
 import { json } from "@tanstack/react-start";
 import { auth } from "@ztunes/core/auth/auth";
-import * as jose from "jose";
-import postgres from "postgres";
 import { must } from "@ztunes/core/shared/must";
 import { createMutators } from "@ztunes/core/zero/mutators";
 import { schema } from "@ztunes/core/zero/schema";
+import * as jose from "jose";
+import postgres from "postgres";
+
+const _env = cloudflareEnv;
 
 const pgURL = must(process.env.PG_URL, "PG_URL is required");
 

@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "vite build",
 		"dev": "vite dev",
-		"dev:ui": "bun --env-file=../../.env -- vite dev",
+		"dev:ui": "bun --env-file=../../.env -- alchemy dev",
 		"typecheck": "tsc -b"
 	},
 	"dependencies": {
@@ -34,6 +34,7 @@
 		"@types/react-dom": "catalog:types",
 		"@vitejs/plugin-react": "catalog:frontend",
 		"tsx": "catalog:utilities",
+		"@cloudflare/workers-types": "catalog:types",
 		"typescript": "catalog:",
 		"concurrently": "catalog:utilities",
 		"chokidar-cli": "catalog:utilities",

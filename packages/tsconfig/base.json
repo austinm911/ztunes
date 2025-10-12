@@ -4,6 +4,7 @@
 		"jsx": "react-jsx",
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
+		"types": ["@cloudflare/workers-types"],
 		"skipLibCheck": true,
 		"strictNullChecks": true,
 		"target": "ESNext",
