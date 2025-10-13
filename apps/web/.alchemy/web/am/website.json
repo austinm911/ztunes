@@ -18,9 +18,15 @@
     "noBundle": true,
     "bindings": {
       "PG_URL": {
-        "@secret": "23spY5VtMtzwWou3aVyIxC/aZIh73DzQ3cErR5JzP1TGX4J8t3mIGarPFjkEyrm8wkRp5pxiJjHY4mxZW510xwy8FqHc3lC8mUaE9/1KRtQYUfj6M+nBb9CcYTs="
+        "@secret": "qVq76yDHQL/sJHsG9Qv6wbsdyq46RHKt25dORJvT0dFoBtq3Idj4WLGuP2rLO5y5C1+m02pSZWJQsidjfivj7MHN1deSe5DzMqUx49LsvKy67wu7ys3NPqNv+5I="
       },
-      "VITE_SERVER_URL": "http://localhost:4848"
+      "VITE_SERVER_URL": "http://localhost:4848",
+      "GITHUB_CLIENT_ID": {
+        "@secret": "ipgT0KgtQdgtoRvyd3fn4UR4akGmDqe4yZ2Ii7S60d2USXvqpRq6ZOY="
+      },
+      "GITHUB_CLIENT_SECRET": {
+        "@secret": "1kKx6w96L3iLSL9XZiNFcpocz99n0diTyfUyQoTeKKhAxuZGir6VUw=="
+      }
     },
     "wrangler": {},
     "name": "web-website-am",
@@ -43,8 +49,8 @@
     "id": "website",
     "format": "esm",
     "createdAt": 1760254720120,
-    "updatedAt": 1760255297006,
-    "url": "http://localhost:3001/",
+    "updatedAt": 1760396972498,
+    "url": "http://localhost:3000/",
     "routes": [],
     "domains": []
   },
@@ -54,9 +60,15 @@
     "noBundle": true,
     "bindings": {
       "PG_URL": {
-        "@secret": "ImrXu5PjsW/qlVx7mBGuDlcJZG3xuMjtfRGydlfrkW/aff1mY+RIcDL+AaWkxP31dXQTFmFf5a4zHnsNsN8vjjUP9S0R+9yKicrIjiWShjlRP0YViMwIkugF/qA="
+        "@secret": "dzzR50RG1tSNnmhE+KJ17c5graR7CZj7mFnr9YGJiyoHuCm5zoDIhs7Vus6e9Nvaq/svSdBiDut4klNGyr/ED/cRgbCeV2/9+Qwx6AIhqpCaLLcae8J+fZGDL0Y="
       },
-      "VITE_SERVER_URL": "http://localhost:4848"
+      "VITE_SERVER_URL": "http://localhost:4848",
+      "GITHUB_CLIENT_ID": {
+        "@secret": "njZMFHCLOzUJB2irb7w7qcis5q+T/6IR8ZImwnXuaSJvVY+2pB20pkw="
+      },
+      "GITHUB_CLIENT_SECRET": {
+        "@secret": "IIibAQyVN02iotgs+kzoI8D/lUVV67MS830ni/5TwBTqCpQH4nbKWg=="
+      }
     },
     "wrangler": {},
     "name": "web-website-am",
@@ -73,7 +85,7 @@
       "directory": "dist/client"
     },
     "dev": {
-      "url": "http://localhost:3001/"
+      "url": "http://localhost:3000/"
     }
   }
 }

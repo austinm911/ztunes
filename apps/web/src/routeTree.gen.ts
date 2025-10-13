@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LayoutRouteRouteImport } from './routes/_layout/route'
 import { Route as LayoutIndexRouteImport } from './routes/_layout/index'
+import { Route as ApiTestRouteImport } from './routes/api/test'
 import { Route as LayoutCartRouteImport } from './routes/_layout/cart'
 import { Route as LayoutArtistRouteImport } from './routes/_layout/artist'
 import { Route as ApiZeroMutateRouteImport } from './routes/api/zero/mutate'
@@ -26,6 +27,11 @@ const LayoutIndexRoute = LayoutIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => LayoutRouteRoute,
+} as any)
+const ApiTestRoute = ApiTestRouteImport.update({
+  id: '/api/test',
+  path: '/api/test',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const LayoutCartRoute = LayoutCartRouteImport.update({
   id: '/cart',
@@ -61,6 +67,7 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 export interface FileRoutesByFullPath {
   '/artist': typeof LayoutArtistRoute
   '/cart': typeof LayoutCartRoute
+  '/api/test': typeof ApiTestRoute
   '/': typeof LayoutIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/auth/refresh': typeof ApiAuthRefreshRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/artist': typeof LayoutArtistRoute
   '/cart': typeof LayoutCartRoute
+  '/api/test': typeof ApiTestRoute
   '/': typeof LayoutIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/auth/refresh': typeof ApiAuthRefreshRoute
@@ -81,6 +89,7 @@ export interface FileRoutesById {
   '/_layout': typeof LayoutRouteRouteWithChildren
   '/_layout/artist': typeof LayoutArtistRoute
   '/_layout/cart': typeof LayoutCartRoute
+  '/api/test': typeof ApiTestRoute
   '/_layout/': typeof LayoutIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/auth/refresh': typeof ApiAuthRefreshRoute
@@ -92,6 +101,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/artist'
     | '/cart'
+    | '/api/test'
     | '/'
     | '/api/auth/$'
     | '/api/auth/refresh'
@@ -101,6 +111,7 @@ export interface FileRouteTypes {
   to:
     | '/artist'
     | '/cart'
+    | '/api/test'
     | '/'
     | '/api/auth/$'
     | '/api/auth/refresh'
@@ -111,6 +122,7 @@ export interface FileRouteTypes {
     | '/_layout'
     | '/_layout/artist'
     | '/_layout/cart'
+    | '/api/test'
     | '/_layout/'
     | '/api/auth/$'
     | '/api/auth/refresh'
@@ -120,6 +132,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   LayoutRouteRoute: typeof LayoutRouteRouteWithChildren
+  ApiTestRoute: typeof ApiTestRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiAuthRefreshRoute: typeof ApiAuthRefreshRoute
   ApiZeroGetQueriesRoute: typeof ApiZeroGetQueriesRoute
@@ -141,6 +154,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof LayoutIndexRouteImport
       parentRoute: typeof LayoutRouteRoute
+    }
+    '/api/test': {
+      id: '/api/test'
+      path: '/api/test'
+      fullPath: '/api/test'
+      preLoaderRoute: typeof ApiTestRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/_layout/cart': {
       id: '/_layout/cart'
@@ -205,6 +225,7 @@ const LayoutRouteRouteWithChildren = LayoutRouteRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   LayoutRouteRoute: LayoutRouteRouteWithChildren,
+  ApiTestRoute: ApiTestRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiAuthRefreshRoute: ApiAuthRefreshRoute,
   ApiZeroGetQueriesRoute: ApiZeroGetQueriesRoute,

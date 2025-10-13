@@ -6,85 +6,16 @@ Estimated release dates:
   - Community users: [36maround 2nd December, 2025 [1m(subject to team availability)[22m[39m
 [33m  - PRO users[39m:       [1m[32mpriority access is available now[39m[22m
 
-Port 3000 is in use, trying another one...
+🚀 ~ dir: /Users/am/Coding/git/ztunes/apps/web
+Using vars defined in process.env
+The latest compatibility date supported by the installed Cloudflare Workers Runtime is [1m"2025-10-08"[22m,
+but you've requested [1m"2025-10-11"[22m. Falling back to [1m"2025-10-08"[22m...
 
-  [32m[1mVITE[22m v7.1.9[39m  [2mready in [0m[1m1157[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v7.1.9[39m  [2mready in [0m[1m2230[22m[2m[0m ms[22m
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3001[22m/[39m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
 [2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m3000[22m[2m/__debug[39m[22m
 [2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
-[vite] connected.
-Error: Cannot find module 'cloudflare:workers' imported from '/Users/am/Coding/git/ztunes/apps/web/src/routes/api/zero/mutate.ts'
-    at fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:34331:34)
-[90m    ... 8 lines matching cause stack trace ...[39m
-    at ModuleRunner.getModuleInformation (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1053:28) {
-  cause: Error: Cannot find module 'cloudflare:workers' imported from '/Users/am/Coding/git/ztunes/apps/web/src/routes/api/zero/mutate.ts'
-      at fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:34331:34)
-      at RunnableDevEnvironment.fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:35167:10)
-      at fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:35136:16)
-      at handleInvoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:28514:27)
-      at EventEmitter.listenerForInvokeHandler (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:28573:19)
-  [90m    at EventEmitter.emit (node:events:518:28)[39m
-      at Object.send (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:18548:39)
-      at Object.invoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:533:31)
-      at Object.invoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:582:31)
-      at ModuleRunner.getModuleInformation (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1053:28) {
-    code: [32m'ERR_MODULE_NOT_FOUND'[39m,
-    runnerError: Error: RunnerError
-        at reviveInvokeError (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:474:64)
-        at Object.invoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:547:11)
-        at async ModuleRunner.getModuleInformation (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1053:7)
-        at async request (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1070:83)
-        at async eval [90m(/Users/am/Coding/git/ztunes/apps/web/[39msrc/routes/api/zero/mutate.ts:1:1[90m)[39m
-        at async ESModulesEvaluator.runInlinedModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:906:3)
-        at async ModuleRunner.directRequest (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1113:59)
-        at async ModuleRunner.cachedRequest (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1031:73)
-        at async eval [90m(/Users/am/Coding/git/ztunes/apps/web/[39msrc/routeTree.gen.ts:16:1[90m)[39m
-        at async ESModulesEvaluator.runInlinedModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:906:3)
-  },
-  status: [33m500[39m,
-  statusText: [90mundefined[39m,
-  headers: [90mundefined[39m,
-  data: [90mundefined[39m,
-  body: [90mundefined[39m,
-  unhandled: [33mtrue[39m
-}
-Error: Cannot find module 'cloudflare:workers' imported from '/Users/am/Coding/git/ztunes/apps/web/src/routes/api/zero/mutate.ts'
-    at fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:34331:34)
-[90m    ... 8 lines matching cause stack trace ...[39m
-    at ModuleRunner.getModuleInformation (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1053:28) {
-  cause: Error: Cannot find module 'cloudflare:workers' imported from '/Users/am/Coding/git/ztunes/apps/web/src/routes/api/zero/mutate.ts'
-      at fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:34331:34)
-      at RunnableDevEnvironment.fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:35167:10)
-      at fetchModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:35136:16)
-      at handleInvoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:28514:27)
-      at EventEmitter.listenerForInvokeHandler (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:28573:19)
-  [90m    at EventEmitter.emit (node:events:518:28)[39m
-      at Object.send (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/chunks/dep-Chhhsdoe.js:18548:39)
-      at Object.invoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:533:31)
-      at Object.invoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:582:31)
-      at ModuleRunner.getModuleInformation (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1053:28) {
-    code: [32m'ERR_MODULE_NOT_FOUND'[39m,
-    runnerError: Error: RunnerError
-        at reviveInvokeError (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:474:64)
-        at Object.invoke (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:547:11)
-        at async ModuleRunner.getModuleInformation (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1053:7)
-        at async request (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1070:83)
-        at async eval [90m(/Users/am/Coding/git/ztunes/apps/web/[39msrc/routes/api/zero/mutate.ts:1:1[90m)[39m
-        at async ESModulesEvaluator.runInlinedModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:906:3)
-        at async ModuleRunner.directRequest (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1113:59)
-        at async ModuleRunner.cachedRequest (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:1031:73)
-        at async eval [90m(/Users/am/Coding/git/ztunes/apps/web/[39msrc/routeTree.gen.ts:16:1[90m)[39m
-        at async ESModulesEvaluator.runInlinedModule (file:///Users/am/Coding/git/ztunes/node_modules/[4m.bun[24m/vite@7.1.9+571ea2fe55c1596e/node_modules/[4mvite[24m/dist/node/module-runner.js:906:3)
-  },
-  status: [33m500[39m,
-  statusText: [90mundefined[39m,
-  headers: [90mundefined[39m,
-  data: [90mundefined[39m,
-  body: [90mundefined[39m,
-  unhandled: [33mtrue[39m
-}
-[2m12:46:10 AM[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mpage reload [39m[2msrc/routes/api/zero/mutate.ts[22m
-[vite] program reload
-[2m12:48:10 AM[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mpage reload [39m[2msrc/routes/api/zero/mutate.ts[22m
-[2m12:49:11 AM[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mpage reload [39m[2msrc/routes/api/zero/mutate.ts[22m
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+

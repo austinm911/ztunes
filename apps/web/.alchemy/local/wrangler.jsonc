@@ -15,6 +15,8 @@
   },
   "vars": {
     "PG_URL": "postgres://postgres:password@localhost:5432/postgres",
-    "VITE_SERVER_URL": "http://localhost:4848"
+    "VITE_SERVER_URL": "http://localhost:4848",
+    "GITHUB_CLIENT_ID": "d",
+    "GITHUB_CLIENT_SECRET": ""
   }
 }

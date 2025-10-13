@@ -31,7 +31,12 @@ export function Button({
 	};
 
 	return (
-		<button onPointerDown={onPointerDown} onClick={onClick} disabled={disabled}>
+		<button
+			type="button"
+			onPointerDown={onPointerDown}
+			onClick={onClick}
+			disabled={disabled}
+		>
 			{children}
 		</button>
 	);
